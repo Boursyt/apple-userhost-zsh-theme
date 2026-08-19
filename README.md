@@ -31,9 +31,17 @@ Thème Oh My Zsh custom, prompt sur 2 lignes avec pomme, `user@hostname`, path e
 
 ## Personnaliser les couleurs
 
-Les couleurs sont définies via les codes 256-color de zsh (`%F{n}`) dans `apple-userhost.zsh-theme` :
+Chaque élément a sa propre variable en haut de `apple-userhost.zsh-theme` — change juste la valeur (nom de couleur ou code 256-color) et recharge le shell :
 
-- ligne `USERHOST` : couleur du `user@hostname` (actuellement `39`)
-- ligne `CWD` : couleur du path (actuellement `208`)
+| Variable         | Élément                          | Valeur par défaut |
+|------------------|-----------------------------------|--------------------|
+| `APPLE_COLOR`    | pomme ` ❯`                       | `white`            |
+| `USER_COLOR`     | `user` (avant le `@`)             | `39` (bleu)        |
+| `HOST_COLOR`     | `hostname` (après le `@`)         | `39` (bleu)        |
+| `AT_COLOR`       | le `@`                            | `white`            |
+| `CHEVRON_COLOR`  | le `❯` après le host              | `white`            |
+| `PATH_COLOR`     | le chemin courant (`%~`)          | `208` (orange)     |
+| `BAR_COLOR`      | les barres `╭─` / `╰─`            | `white`            |
+| `GIT_COLOR`      | le statut git `[branche+]`        | `green`            |
 
 Table des couleurs 256 : `for i in {0..255}; do print -Pn "%F{$i}%3d %f" $i; (( (i+1) % 16 )) || print; done`
