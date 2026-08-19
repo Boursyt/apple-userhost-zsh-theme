@@ -18,7 +18,7 @@ ZSH_THEME_GIT_PROMPT_DIRTY="+"
 ZSH_THEME_GIT_PROMPT_CLEAN=""
 
 # Segments
-local APPLE="%{%B%F{$APPLE_COLOR}%} ❯%{%b%f%}"    # apple
+local APPLE="%{%B%F{$APPLE_COLOR}%}  ❯%{%b%f%}"    # apple
 local USERHOST="%{%B%F{$USER_COLOR}%}%n%{%b%f%}%{%B%F{$AT_COLOR}%}@%{%b%f%}%{%B%F{$HOST_COLOR}%}%m%{%b%f%} %{%B%F{$CHEVRON_COLOR}%}❯%{%b%f%}"
 local CWD="%{%B%F{$PATH_COLOR}%}%~%{%b%f%}"
 

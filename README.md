@@ -5,7 +5,7 @@ A custom Oh My Zsh theme: a 2-line prompt with an apple icon, `user@hostname`, p
 ![preview](preview.png)
 
 ```
-╭─  ❯ theo@MacBook-Pro ❯ ~/dev/apple-userhost-zsh-theme [main]
+╭─  ❯ theo@MacBook-Pro ❯ ~/dev/apple-userhost-zsh-theme [main]
 ╰─ $
 ```
 
