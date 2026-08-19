@@ -1,47 +1,47 @@
 # apple-userhost
 
-Thème Oh My Zsh custom, prompt sur 2 lignes avec pomme, `user@hostname`, path et statut git.
+A custom Oh My Zsh theme: a 2-line prompt with an apple icon, `user@hostname`, path, and git status.
 
 ```
 ╭─  theo@MacBook-Pro ❯ ~/iac/infra-loadtest [staging+]
 ╰─ $
 ```
 
-- ` ❯` (pomme) et les barres `╭─`/`╰─` : blanc
-- `user@hostname` : bleu (256-color `39`), en gras
-- path (`%~`) : orange (256-color `208`), en gras
-- statut git (`[branche+]`) : vert
+- ` ❯` (apple) and the `╭─`/`╰─` bars: white
+- `user@hostname`: blue (256-color `39`), bold
+- path (`%~`): orange (256-color `208`), bold
+- git status (`[branch+]`): green
 
 ## Installation
 
-1. Copier (ou symlink) `apple-userhost.zsh-theme` dans `$ZSH_CUSTOM/themes/` :
+1. Copy (or symlink) `apple-userhost.zsh-theme` into `$ZSH_CUSTOM/themes/`:
 
    ```sh
-   ln -s /chemin/vers/apple-userhost-zsh-theme/apple-userhost.zsh-theme \
+   ln -s /path/to/apple-userhost-zsh-theme/apple-userhost.zsh-theme \
          "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/apple-userhost.zsh-theme"
    ```
 
-2. Dans `~/.zshrc`, définir le thème :
+2. In `~/.zshrc`, set the theme:
 
    ```sh
    ZSH_THEME="apple-userhost"
    ```
 
-3. Recharger le shell : `source ~/.zshrc`.
+3. Reload your shell: `source ~/.zshrc`.
 
-## Personnaliser les couleurs
+## Customizing colors
 
-Chaque élément a sa propre variable en haut de `apple-userhost.zsh-theme` — change juste la valeur (nom de couleur ou code 256-color) et recharge le shell :
+Every element has its own variable at the top of `apple-userhost.zsh-theme` — just change the value (color name or 256-color code) and reload your shell:
 
-| Variable         | Élément                          | Valeur par défaut |
-|------------------|-----------------------------------|--------------------|
-| `APPLE_COLOR`    | pomme ` ❯`                       | `white`            |
-| `USER_COLOR`     | `user` (avant le `@`)             | `39` (bleu)        |
-| `HOST_COLOR`     | `hostname` (après le `@`)         | `39` (bleu)        |
-| `AT_COLOR`       | le `@`                            | `white`            |
-| `CHEVRON_COLOR`  | le `❯` après le host              | `white`            |
-| `PATH_COLOR`     | le chemin courant (`%~`)          | `208` (orange)     |
-| `BAR_COLOR`      | les barres `╭─` / `╰─`            | `white`            |
-| `GIT_COLOR`      | le statut git `[branche+]`        | `green`            |
+| Variable         | Element                           | Default          |
+|------------------|-------------------------------------|-------------------|
+| `APPLE_COLOR`    | apple ` ❯`                         | `white`           |
+| `USER_COLOR`     | `user` (before the `@`)             | `39` (blue)       |
+| `HOST_COLOR`     | `hostname` (after the `@`)          | `39` (blue)       |
+| `AT_COLOR`       | the `@`                             | `white`           |
+| `CHEVRON_COLOR`  | the `❯` after the host              | `white`           |
+| `PATH_COLOR`     | the current path (`%~`)             | `208` (orange)    |
+| `BAR_COLOR`      | the `╭─` / `╰─` bars                | `white`           |
+| `GIT_COLOR`      | git status `[branch+]`              | `green`           |
 
-Table des couleurs 256 : `for i in {0..255}; do print -Pn "%F{$i}%3d %f" $i; (( (i+1) % 16 )) || print; done`
+256-color table: `for i in {0..255}; do print -Pn "%F{$i}%3d %f" $i; (( (i+1) % 16 )) || print; done`
