@@ -2,6 +2,8 @@
 
 A custom Oh My Zsh theme: a 2-line prompt with an apple icon, `user@hostname`, path, and git status.
 
+![preview](preview.png)
+
 ```
 ╭─  theo@MacBook-Pro ❯ ~/iac/infra-loadtest [staging+]
 ╰─ $
