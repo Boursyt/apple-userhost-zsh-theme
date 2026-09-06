@@ -9,9 +9,9 @@ A custom Oh My Zsh theme: a 2-line prompt with an apple icon, `user@hostname`, p
 ╰─ $
 ```
 
-- `user@hostname` and the bars: Blue
+- `user@hostname`: Blue
 - path (`%~`): Teal
-- apple, chevrons, git status and prompt character: Mauve
+- bars, prompt character, apple, chevrons and git status: Mauve
 
 ## Installation
 
@@ -34,10 +34,10 @@ A custom Oh My Zsh theme: a 2-line prompt with an apple icon, `user@hostname`, p
 
 Every element has its own variable at the top of `apple-userhost.zsh-theme`. The defaults use Catppuccin Mocha truecolor hex values; change any value and reload your shell to customize them:
 
-| Variable         | Elements                                      | Mocha color      |
-|------------------|-----------------------------------------------|------------------|
-| `USERHOST_COLOR` | `user@hostname` and the `╭─` / `╰─` bars   | Blue `#89b4fa`   |
-| `PATH_COLOR`     | current path (`%~`)                           | Teal `#94e2d5`   |
-| `ACCENT_COLOR`   | apple, chevrons, git status and `$` / `#`     | Mauve `#cba6f7`  |
+| Variable         | Elements                                             | Mocha color     |
+|------------------|------------------------------------------------------|-----------------|
+| `USERHOST_COLOR` | `user@hostname`                                      | Blue `#89b4fa`  |
+| `PATH_COLOR`     | current path (`%~`)                                  | Teal `#94e2d5`  |
+| `ACCENT_COLOR`   | bars, `$` / `#`, apple, chevrons and git status      | Mauve `#cba6f7` |
 
 The palette requires a terminal with truecolor support. Zsh color names and 256-color codes remain valid alternatives.
