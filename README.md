@@ -1,6 +1,6 @@
 # apple-userhost
 
-A custom Oh My Zsh theme: a 2-line prompt with an apple icon, `user@hostname`, path, and git status.
+A custom Oh My Zsh theme: a 2-line prompt with an apple icon, `user@hostname`, path, and git status. Its default palette is designed for [Catppuccin Mocha](https://github.com/catppuccin/catppuccin).
 
 ![preview](preview.png)
 
@@ -9,10 +9,9 @@ A custom Oh My Zsh theme: a 2-line prompt with an apple icon, `user@hostname`, p
 ╰─ $
 ```
 
-- ` ❯` (apple) and the `╭─`/`╰─` bars: white
-- `user@hostname`: blue (256-color `39`), bold
-- path (`%~`): orange (256-color `208`), bold
-- git status (`[branch+]`): green
+- `user@hostname` and the bars: Blue
+- path (`%~`): Teal
+- apple, chevrons, git status and prompt character: Mauve
 
 ## Installation
 
@@ -33,17 +32,12 @@ A custom Oh My Zsh theme: a 2-line prompt with an apple icon, `user@hostname`, p
 
 ## Customizing colors
 
-Every element has its own variable at the top of `apple-userhost.zsh-theme` — just change the value (color name or 256-color code) and reload your shell:
+Every element has its own variable at the top of `apple-userhost.zsh-theme`. The defaults use Catppuccin Mocha truecolor hex values; change any value and reload your shell to customize them:
 
-| Variable         | Element                           | Default          |
-|------------------|-------------------------------------|-------------------|
-| `APPLE_COLOR`    | apple ` ❯`                         | `white`           |
-| `USER_COLOR`     | `user` (before the `@`)             | `39` (blue)       |
-| `HOST_COLOR`     | `hostname` (after the `@`)          | `39` (blue)       |
-| `AT_COLOR`       | the `@`                             | `white`           |
-| `CHEVRON_COLOR`  | the `❯` after the host              | `white`           |
-| `PATH_COLOR`     | the current path (`%~`)             | `208` (orange)    |
-| `BAR_COLOR`      | the `╭─` / `╰─` bars                | `white`           |
-| `GIT_COLOR`      | git status `[branch+]`              | `green`           |
+| Variable         | Elements                                      | Mocha color      |
+|------------------|-----------------------------------------------|------------------|
+| `USERHOST_COLOR` | `user@hostname` and the `╭─` / `╰─` bars   | Blue `#89b4fa`   |
+| `PATH_COLOR`     | current path (`%~`)                           | Teal `#94e2d5`   |
+| `ACCENT_COLOR`   | apple, chevrons, git status and `$` / `#`     | Mauve `#cba6f7`  |
 
-256-color table: `for i in {0..255}; do print -Pn "%F{$i}%3d %f" $i; (( (i+1) % 16 )) || print; done`
+The palette requires a terminal with truecolor support. Zsh color names and 256-color codes remain valid alternatives.
